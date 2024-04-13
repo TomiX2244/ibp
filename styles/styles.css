@@ -79,14 +79,15 @@ a{
     color: #ffffff !important;
 }
 /* Quienes somos */
-.section2{
+.section2 h2{
     color: #eeeeee;
     font-size: 350%;
     padding: 0;
 }
-.section1 p{
-    font-size: 75%;
+.section2 p{
+    font-size: 200%;
     width: 40%;
+    color: #eeeeee;
 }
 .section-iframe{
     border-radius: 50px;
@@ -97,7 +98,6 @@ a{
     transition: 0.5s;
     border-radius: 50px;
     overflow: hidden;
-    border-color: #ffffff;
     border-width: 1px;
 }
 .section-iframe:hover{
@@ -141,7 +141,7 @@ a{
     flex-direction: column;
     padding-top: 200px;
     padding-left: 200px;
-    padding-bottom: 750px;
+    padding-bottom: 500px;
     gap: 20px;
 }
 .button2{
@@ -158,6 +158,11 @@ a{
     width: 50%;
     border: #000000;
     border-radius: 10px;
+}
+.login-container-grid div{
+    font-size: 2rem;
+    color: #000000;
+    background-color: #777777;
 }
 /* Contacto */
 .contacto-h1{
