@@ -2,7 +2,7 @@
 body{
     background-image: url(../images/hero4.jpg);
     background-attachment: fixed;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif !important;
     color: #ffffff;
 }
 .ul-nav li:hover{
@@ -33,12 +33,14 @@ header{
     color: #eeeeee;
     font-size: 350%;
     padding-top: 200px;
-    padding-bottom: 750px;
+    padding-bottom: 800px;
 }
 .e-broker{
     display: flex;
     justify-content: center;
     text-decoration: none !important;
+    font-size: 110%;
+    font-weight: 400;
 }
 .button{
     display: inline-block;
@@ -104,25 +106,12 @@ a{
     filter: blur(0);
     transition: 1s;
 }
-.carrousel-inner{
-    margin: auto;
+.d-block_w-100{
     max-height: 27rem;
     max-width: 37rem;
-    overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    border-radius: 20px;
-}
-.carrousel-slide{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    overflow-y: hidden;
-}
-.carrousel-controls{
-    margin: auto;
     text-align: center;
+    margin: auto;
 }
 /* Login */
 .body-login{
