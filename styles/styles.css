@@ -33,14 +33,14 @@ header{
     color: #eeeeee;
     font-size: 350%;
     padding-top: 200px;
-    padding-bottom: 800px;
+    padding-bottom: 650px;
 }
 .e-broker{
     display: flex;
     justify-content: center;
     text-decoration: none !important;
     font-size: 110%;
-    font-weight: 400;
+    font-weight: 500;
 }
 .button{
     display: inline-block;
@@ -48,7 +48,6 @@ header{
     transition: 0.5s;
     width: 200px;
     font-size: 50%;
-    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     border-radius: 50px;
     overflow: hidden;
@@ -63,14 +62,28 @@ footer{
     font-family: 'Times New Roman', Times, serif;
 }
 .form{
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
-    font-size: 200%;
+    font-size: 150%;
+    gap: 2px;
 }
-input{
-    width: 10%;
+.form input{
+    width: 15%;
 }
-#Mensaje{
+.form h3{
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 10px;
+}
+.form button{
+    transition: 0.5s;
+}
+.form button:hover{
+    width: 15%;
+    transition: 1s;
+}
+.form-messaje{
     height: 75px;
 }
 .input{
@@ -92,15 +105,11 @@ a{
     color: #eeeeee;
 }
 .section-iframe{
-    border-radius: 50px;
-    overflow: hidden;
-    border-color: #ffffff;
     border-width: 1px;
+    border-radius: 50px;
+    border-color: #ffffff;
     filter: blur(15px);
     transition: 0.5s;
-    border-radius: 50px;
-    overflow: hidden;
-    border-width: 1px;
 }
 .section-iframe:hover{
     filter: blur(0);
@@ -138,8 +147,13 @@ a{
     background-color: #ffffff;
     width: 250px;
     font-size: 200%;
-    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.button:hover{
+    background-color: #2b2b2b;
+    transition: 0.5s;
 }
 .login-input input{
     gap: 50%;
@@ -167,9 +181,13 @@ a{
 .form3{
     padding-top: 20px;
     padding-left: 200px;
-    width: 200%;
     display: flex;
     flex-direction: column;
+    width: 15%;
+    gap: 4px;
+}
+.form3 input{
+    height: 30px;
 }
 .consulta{
     padding-top: 50px;
@@ -211,12 +229,21 @@ a{
     border-width: 1px;
     filter: blur(15px);
     transition: 0.5s;
+}
+.section-iframe-negocios:hover{
+    filter: blur(0);
+    transition: 1s;
+    flex-grow: 0.5;
+}
+iframe{
     border-radius: 50px;
     overflow: hidden;
     border-color: #ffffff;
     border-width: 1px;
+    filter: blur(15px);
+    transition: 0.5s;
 }
-.section-iframe-negocios:hover{
+iframe:hover{
     filter: blur(0);
     transition: 1s;
     flex-grow: 0.5;
