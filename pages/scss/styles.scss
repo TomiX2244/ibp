@@ -1,25 +1,40 @@
-/* Index */
 body{
-    background-image: url(../images/hero4.jpg);
+    background-image: url(../../images/hero4.jpg);
     background-attachment: fixed;
     font-family: 'Times New Roman', Times, serif !important;
     color: #ffffff;
-}
-.ul-nav li:hover{
-    background-color: #2b2b2b;
+    hr{
+        color: #eee; opacity: 1;
+    }
+    footer{
+        color: #eee;
+    }
 }
 input{
     border: 1px solid rgb(165, 165, 165);
 }
-header{
-    color:  #ffffff;
-    position: sticky;
-    top: 0;
+iframe{
+    border-radius: 50px;
+    overflow: hidden;
+    border-color: #ffffff;
+    border-width: 1px;
+    filter: blur(15px);
+    transition: 0.5s;
+        &:hover{
+            filter: blur(0);
+            transition: 1s;
+            flex-grow: 0.5;
+        }
 }
+/* Index */
 .h1-principal{
     font-size: 300%;
     text-decoration: none;
     color: #ffffff;
+    p{
+        padding: 10px;
+        margin: 0;
+    }
 }
 .ul-nav{
     font-size: 150%;
@@ -28,12 +43,25 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    & li:hover{
+        background-color: #2b2b2b;
+        }
 }
 .section1{
     color: #eeeeee;
     font-size: 350%;
     padding-top: 200px;
     padding-bottom: 650px;
+    .contacto-h1{
+        font-size: 120%;
+        padding-left: 200px;
+        margin: 0%;
+    }
+    .contacto-h2{
+        padding-left: 200px;
+        margin: 0%;
+        font-size: 75%
+    }
 }
 .e-broker{
     display: flex;
@@ -44,22 +72,19 @@ header{
 }
 .button{
     display: inline-block;
-    background-color: #ffffff;
+    background-color: #6f6f6f;
     transition: 0.5s;
     width: 200px;
     font-size: 50%;
     font-weight: bold;
     border-radius: 50px;
     overflow: hidden;
-}
-.button:hover{
-    background-color: #5e5e5e;
-    transition: 1s;
-}
-footer{
-    color: #eee;
-    background-image: url(../images/footer.jpg);
-    font-family: 'Times New Roman', Times, serif;
+    &:hover{
+        background-color: #ffffff;
+        transition: 1s;
+        transform: translate(10);
+        transform: scale(1.5);
+    }
 }
 .form{
     padding-left: 10px;
@@ -67,53 +92,47 @@ footer{
     flex-direction: column;
     font-size: 150%;
     gap: 2px;
-}
-.form input{
-    width: 15%;
-}
-.form h3{
-    font-size: 3rem;
-    font-weight: 600;
-    padding: 10px;
-}
-.form button{
-    transition: 0.5s;
-}
-.form button:hover{
-    width: 15%;
-    transition: 1s;
+        input{
+            width: 15%;
+        }
+        h3{
+            font-size: 3rem;
+            font-weight: 600;
+            padding: 10px;
+        }
 }
 .form-messaje{
     height: 75px;
 }
 .input{
     width: 5%;
+    transition: 0.5s;
+        &:hover{
+        width: 15%;
+        transition: 1s;
+        }
 }
 a{
     text-decoration: none !important;
     color: #ffffff !important;
 }
 /* Quienes somos */
-.section2 h2{
-    color: #eeeeee;
-    font-size: 350%;
-    padding: 0;
-}
-.section2 p{
-    font-size: 200%;
-    width: 40%;
-    color: #eeeeee;
-}
-.section-iframe{
-    border-width: 1px;
-    border-radius: 50px;
-    border-color: #ffffff;
-    filter: blur(15px);
-    transition: 0.5s;
-}
-.section-iframe:hover{
-    filter: blur(0);
-    transition: 1s;
+.section2{
+    h2{
+        color: #eeeeee;
+        font-size: 350%;
+        padding: 10px;
+        padding-top: 20px;
+        margin: 0;
+    }
+    p{
+        font-size: 200%;
+        width: 40%;
+        color: #eeeeee;
+        padding: 10px;
+        padding-bottom: 10px;
+        margin: 0;
+    }
 }
 .d-block_w-100{
     max-height: 27rem;
@@ -123,16 +142,12 @@ a{
     margin: auto;
 }
 /* Login */
-.body-login{
-    background-color: #2b2b2b !important;
-    color: #ffffff;
-    font-family: 'Times New Roman', Times, serif;
-}
 .h2-principal{
     font-size: 700%;
     margin: 0%;
     padding-top: 100px;
     padding-bottom: 5px;
+    color: #eee;
 }
 .login1{
     display: flex;
@@ -150,17 +165,10 @@ a{
     font-weight: bold;
     border-radius: 50px;
     overflow: hidden;
-}
-.button:hover{
-    background-color: #2b2b2b;
-    transition: 0.5s;
-}
-.login-input input{
-    gap: 50%;
-    height: 200%;
-    width: 50%;
-    border: #000000;
-    border-radius: 10px;
+    &:hover{
+        background-color: #2b2b2b;
+        transition: 0.5s;
+    }
 }
 .login-container-grid div{
     font-size: 2rem;
@@ -168,16 +176,6 @@ a{
     background-color: #777777;
 }
 /* Contacto */
-.contacto-h1{
-    font-size: 120%;
-    padding-left: 200px;
-    margin: 0%;
-}
-.contacto-h2{
-    padding-left: 200px;
-    margin: 0%;
-    font-size: 75%
-}
 .form3{
     padding-top: 20px;
     padding-left: 200px;
@@ -185,9 +183,9 @@ a{
     flex-direction: column;
     width: 15%;
     gap: 4px;
-}
-.form3 input{
+        input{
     height: 30px;
+}
 }
 .consulta{
     padding-top: 50px;
@@ -196,55 +194,42 @@ a{
 .section-negocios{
     display: flex;
     flex-direction: column;
+    p{
+        font-size: 2rem;
+        color: #ffffff;
+        width: 50%
+    }
 }
 .h1-negocios{
     padding-top: 200px;
     font-size: 350%;
     color: #ffffff;
 }
-.section-negocios p{
-    font-size: 150%;
-    color: #ffffff;
-    width: 50%
-}
 .negocios-media{
     padding: 15px;
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
+    img{
+        filter: blur(15px);
+        transition: 1s;
+        &:hover{
+            filter: blur(0);
+            flex-grow: 0.5;
+            transition: 1s;
+        }
+    }
 }
-.negocios-media img{
-    filter: blur(15px);
-    transition: 1s;
-}
-.negocios-media img:hover{
-    filter: blur(0);
-    flex-grow: 0.5;
-    transition: 1s;
-}
-.section-iframe-negocios{
-    border-radius: 50px;
-    overflow: hidden;
-    border-color: #ffffff;
-    border-width: 1px;
-    filter: blur(15px);
-    transition: 0.5s;
-}
-.section-iframe-negocios:hover{
-    filter: blur(0);
-    transition: 1s;
-    flex-grow: 0.5;
-}
-iframe{
-    border-radius: 50px;
-    overflow: hidden;
-    border-color: #ffffff;
-    border-width: 1px;
-    filter: blur(15px);
-    transition: 0.5s;
-}
-iframe:hover{
-    filter: blur(0);
-    transition: 1s;
-    flex-grow: 0.5;
-}
+// .section-iframe-negocios{
+//     border-radius: 50px;
+//     overflow: hidden;
+//     border-color: #ffffff;
+//     border-width: 1px;
+//     filter: blur(15px);
+//     transition: 0.5s;
+//     :hover{
+//         filter: blur(0);
+//         transition: 1s;
+//         flex-grow: 0.5;
+//     }
+// }
