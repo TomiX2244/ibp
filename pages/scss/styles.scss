@@ -1,5 +1,5 @@
 body{
-    background-image: url(../../images/hero4.jpg);
+    background-image: url(../../images/Final/hero4.jpg);
     background-attachment: fixed;
     font-family: 'Times New Roman', Times, serif !important;
     color: #ffffff;
@@ -34,6 +34,8 @@ iframe{
     p{
         padding: 10px;
         margin: 0;
+        font-weight: bold;
+        font-style: italic;
     }
 }
 .ul-nav{
@@ -120,18 +122,34 @@ a{
 .section2{
     h2{
         color: #eeeeee;
-        font-size: 350%;
+        font-size: 375%;
         padding: 10px;
-        padding-top: 20px;
+        padding-top: 75px;
         margin: 0;
     }
     p{
-        font-size: 200%;
+        font-size: 175%;
         width: 40%;
         color: #eeeeee;
         padding: 10px;
         padding-bottom: 10px;
         margin: 0;
+    }
+    img{
+        height: 5%;
+        width: 25%;
+        border-radius: 50px;
+        overflow: hidden;
+        border-color: #ffffff;
+        border-width: 1px;
+        filter: blur(15px);
+        filter: brightness(25%);
+        transition: 0.5s;
+            &:hover{
+                filter: blur(0);
+                filter: brightness(100%);
+                transition: 0.7s;
+            }
     }
 }
 .d-block_w-100{
@@ -189,6 +207,20 @@ a{
 }
 .consulta{
     padding-top: 50px;
+    h2{
+        font-size: 100%;
+    }
+    p{
+        font-size: 70%;
+        width: 1500px;
+    }
+    .consulta-mapas{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
 }
 /* Negocios */
 .section-negocios{
@@ -215,7 +247,7 @@ a{
         transition: 1s;
         &:hover{
             filter: blur(0);
-            flex-grow: 0.5;
+            flex-grow: 0.15;
             transition: 1s;
         }
     }
