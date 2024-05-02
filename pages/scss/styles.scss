@@ -1,3 +1,5 @@
+@import url(base/mixins);
+@import url(base/reset);
 body{
     background-image: url(../../images/Final/hero4.jpg);
     background-attachment: fixed;
@@ -10,21 +12,18 @@ body{
         color: #eee;
     }
 }
-input{
-    border: 1px solid rgb(165, 165, 165);
-}
 iframe{
     border-radius: 50px;
     overflow: hidden;
     border-color: #ffffff;
     border-width: 1px;
     filter: blur(15px);
-    transition: 0.5s;
-        &:hover{
-            filter: blur(0);
-            transition: 1s;
-            flex-grow: 0.5;
-        }
+    transition: 1s;
+    &:hover{
+        filter: blur(0);
+        flex-grow: 0.5;
+        transition: 1s;
+    }
 }
 /* Index */
 .h1-principal{
@@ -81,6 +80,7 @@ iframe{
     font-weight: bold;
     border-radius: 50px;
     overflow: hidden;
+    margin: 20px;
     &:hover{
         background-color: #ffffff;
         transition: 1s;
@@ -107,6 +107,7 @@ iframe{
     height: 75px;
 }
 .input{
+    border: 1px solid rgb(165, 165, 165);
     width: 5%;
     transition: 0.5s;
         &:hover{
@@ -252,16 +253,3 @@ a{
         }
     }
 }
-// .section-iframe-negocios{
-//     border-radius: 50px;
-//     overflow: hidden;
-//     border-color: #ffffff;
-//     border-width: 1px;
-//     filter: blur(15px);
-//     transition: 0.5s;
-//     :hover{
-//         filter: blur(0);
-//         transition: 1s;
-//         flex-grow: 0.5;
-//     }
-// }

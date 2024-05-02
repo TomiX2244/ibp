@@ -1,3 +1,5 @@
+@import url(base/mixins);
+@import url(base/reset);
 body {
   background-image: url(../../images/Final/hero4.jpg);
   background-attachment: fixed;
@@ -12,22 +14,18 @@ body footer {
   color: #eee;
 }
 
-input {
-  border: 1px solid rgb(165, 165, 165);
-}
-
 iframe {
   border-radius: 50px;
   overflow: hidden;
   border-color: #ffffff;
   border-width: 1px;
   filter: blur(15px);
-  transition: 0.5s;
+  transition: 1s;
 }
 iframe:hover {
   filter: blur(0);
-  transition: 1s;
   flex-grow: 0.5;
+  transition: 1s;
 }
 
 /* Index */
@@ -89,6 +87,7 @@ iframe:hover {
   font-weight: bold;
   border-radius: 50px;
   overflow: hidden;
+  margin: 20px;
 }
 .button:hover {
   background-color: #ffffff;
@@ -118,6 +117,7 @@ iframe:hover {
 }
 
 .input {
+  border: 1px solid rgb(165, 165, 165);
   width: 5%;
   transition: 0.5s;
 }
