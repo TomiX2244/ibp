@@ -1,5 +1,7 @@
 @import url(base/mixins);
 @import url(base/reset);
+
+
 body{
     background-image: url(../../images/Final/hero4.jpg);
     background-attachment: fixed;
@@ -95,7 +97,7 @@ iframe{
     font-size: 150%;
     gap: 2px;
         input{
-            width: 15%;
+            width: 25%;
         }
         h3{
             font-size: 3rem;
@@ -108,16 +110,78 @@ iframe{
 }
 .input{
     border: 1px solid rgb(165, 165, 165);
-    width: 5%;
+    width: 15%;
     transition: 0.5s;
         &:hover{
-        width: 15%;
+        width: 25%;
         transition: 1s;
         }
 }
 a{
     text-decoration: none !important;
     color: #ffffff !important;
+}
+@media screen and (max-width: 800px) {
+    body{
+        background-image: url(../../images/Final/hero5.jpg);
+    }
+    .section1{
+        padding-top: 150px;
+        padding-bottom: 525px;
+    }
+    .h1-principal{
+        font-size: 200%;
+    }
+    .ul-nav{
+        li{
+            font-size: 100%;
+            padding-top: 10px;
+        }
+    }
+    .e-broker{
+        font-size: 1rem;
+    }
+    .button{
+        font-size: 1.5rem;
+    }
+    .form{
+        h3{
+            font-size: 2rem;
+            font-weight: 750;
+            padding-left: 0
+        }
+        input{
+            width: 60%;
+        }
+        .input{
+            width: 40%;
+        }
+    }
+}
+@media screen and (max-width: 1500px) {
+    body{
+        background-image: url(../../images/Final/hero7.jpg);
+    }
+    .section1{
+        padding-bottom: 600px;
+    }
+    .e-broker{
+        font-size: 2.1rem;
+    }
+    .button{
+        font-size: 1.7rem;
+    }
+    .form{
+        h3{
+            font-weight: 750;
+        }
+        input{
+            width: 40%;
+        }
+        .input{
+            width: 25%;
+        }
+    }
 }
 /* Quienes somos */
 .section2{
