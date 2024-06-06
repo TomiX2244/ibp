@@ -313,7 +313,7 @@ a {
     width: 300%;
   }
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
   body {
     background-image: url(../../images/Final/hero7.jpg);
   }
@@ -384,7 +384,7 @@ a {
     width: 30%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 525px) {
   body {
     background-image: url(../../images/Final/hero6.jpg);
   }
