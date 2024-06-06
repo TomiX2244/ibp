@@ -13,6 +13,7 @@ body{
     footer{
         color: #eee;
     }
+    size-adjust: 100%;
 }
 iframe{
     border-radius: 50px;
@@ -121,68 +122,6 @@ a{
     text-decoration: none !important;
     color: #ffffff !important;
 }
-@media screen and (max-width: 800px) {
-    body{
-        background-image: url(../../images/Final/hero5.jpg);
-    }
-    .section1{
-        padding-top: 150px;
-        padding-bottom: 525px;
-    }
-    .h1-principal{
-        font-size: 200%;
-    }
-    .ul-nav{
-        li{
-            font-size: 100%;
-            padding-top: 10px;
-        }
-    }
-    .e-broker{
-        font-size: 1rem;
-    }
-    .button{
-        font-size: 1.5rem;
-    }
-    .form{
-        h3{
-            font-size: 2rem;
-            font-weight: 750;
-            padding-left: 0
-        }
-        input{
-            width: 60%;
-        }
-        .input{
-            width: 40%;
-        }
-    }
-}
-@media screen and (max-width: 1500px) {
-    body{
-        background-image: url(../../images/Final/hero7.jpg);
-    }
-    .section1{
-        padding-bottom: 600px;
-    }
-    .e-broker{
-        font-size: 2.1rem;
-    }
-    .button{
-        font-size: 1.7rem;
-    }
-    .form{
-        h3{
-            font-weight: 750;
-        }
-        input{
-            width: 40%;
-        }
-        .input{
-            width: 25%;
-        }
-    }
-}
 /* Quienes somos */
 .section2{
     h2{
@@ -278,6 +217,8 @@ a{
     p{
         font-size: 70%;
         width: 1500px;
+        box-sizing: border-box;
+        max-width: 100%;
     }
     .consulta-mapas{
         display: flex;
@@ -316,4 +257,247 @@ a{
             transition: 1s;
         }
     }
+}
+// Media queries
+@media screen and (max-width: 900px) {
+    body{
+        background-image: url(../../images/Final/hero5.jpg);
+    }
+    .section1{
+        padding-top: 150px;
+        padding-bottom: 525px;
+    }
+    .h1-principal{
+        font-size: 200%;
+    }
+    .ul-nav{
+        li{
+            font-size: 100%;
+            padding-top: 10px;
+        }
+    }
+    .e-broker{
+        font-size: 0.8rem;
+    }
+    .button{
+        font-size: 1.5rem;
+    }
+    .form{
+        h3{
+            font-size: 2rem;
+            font-weight: 750;
+            padding-left: 0
+        }
+        input{
+            width: 60%;
+        }
+        .input{
+            width: 40%;
+        }
+    }
+    // Contacto
+    .form{
+        input{
+            width: 300%;
+        }
+    }
+}
+@media screen and (max-width: 1500px) {
+    // Index
+    body{
+        background-image: url(../../images/Final/hero7.jpg);
+    }
+    .h1-principal{
+        font-size: 225%;
+    }
+    .section1{
+        padding-bottom: 600px;
+    }
+    .e-broker{
+        font-size: 2.1rem;
+    }
+    .button{
+        font-size: 1.7rem;
+    }
+    .form{
+        h3{
+            font-weight: 750;
+        }
+        input{
+            width: 40%;
+        }
+        .input{
+            width: 25%;
+        }
+    }
+    // Quienes somos
+    .section2{
+        h2{
+            font-size: 300%;
+        }
+        p{
+            width: 60%;
+        }
+        img{
+            height: 15%;
+            width: 35%;
+        }        
+    }
+    // Contacto
+    .section1{
+        .contacto-h1{
+            font-size: 85%;
+            padding-left: 70px;
+        }
+        .contacto-h2{
+            font-size: 70%;
+            padding-left: 70px;
+            padding-top: 10px;
+        }
+    }
+    .form3{
+        padding-left: 70px;
+        input{
+            width: 250%;
+        }
+    }
+    // Login
+    .login1{
+        padding-left: 15%;
+        .h2-principal{
+            font-size: 400%;
+        }
+    }
+    // Negocios
+    .section-negocios{
+    .h1-negocios{
+        padding-left: 20px;
+        padding-top: 4rem;
+        font-size: 3rem;
+    }        
+    p{
+        padding-left: 20px;
+        width: 85%;
+        font-size: 1.7rem;
+    }
+    }
+    .negocios-media{
+        img{
+            height: 50%;
+            width: 50%;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    body{
+        background-image: url(../../images/Final/hero6.jpg);
+    }
+    .section1{
+        padding-top: 75px;
+        padding-bottom: 235px;
+    }
+    .h1-principal{
+        font-size: 185%;
+    }
+    .ul-nav{
+        li{
+            font-size: 85%;
+            padding-top: 10px;
+        }
+    }
+    .e-broker{
+        font-size: 1.45rem;
+        font-weight: 550;
+    }
+    .form{
+        h3{
+            font-size: 2.25rem;
+            font-weight: 800;
+            padding: 0
+        }
+        input{
+            width: 80%;
+        }
+        .input{
+            width: 60%;
+        }
+    }
+    // Quienes somos
+    .section2{
+        p{
+            width: 95%;
+            font-size: 1.7rem;
+        }
+        img{
+            height: 40%;
+            width: 65%;
+        }        
+    }
+    .container-grid{
+        p{
+            font-size: 1rem;
+        }
+        .carrousel-inner{
+            .carrousel-item.active{
+                img{
+                    height: 5%;
+                    width: 5%;
+                }
+            }
+        }
+    }
+    // Contacto
+    .form3{
+        input{
+            width: 500%;
+        }
+    }
+    .consulta-mapas{
+        iframe{
+            height: 60%;
+            width: 95.5%;
+        }
+    }
+    // Login
+    .login1{
+        padding-left: 15px;
+        padding-top: 20%;
+        padding-bottom: 60%;
+        .h2-principal{
+            font-size: 2.4rem;
+            font-weight: bold;
+        }
+    }
+    .login-container-grid{
+        .col{
+            p{
+                font-size: 47.5%;
+            }
+        }
+    }
+    // Negocios
+    .section-negocios{
+        .h1-negocios{
+            padding-left: 10px;
+            padding-top: 2rem;
+        }        
+        p{
+            padding-left: 10px;
+            width: 115%;
+            font-size: 1.4rem;
+        }
+        }
+        .negocios-media{
+            size-adjust: 100%;
+            display: flex;
+            flex-direction: column;
+            img{
+                height: 115%;
+                width: 115%;
+            }
+            iframe{
+                height: 315%;
+                width: 115%;
+            }
+        }
 }
