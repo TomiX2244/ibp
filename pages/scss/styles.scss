@@ -1,7 +1,33 @@
-@import url(base/mixins);
-@import url(base/reset);
-
-
+// Mixins
+@mixin h($size, $color, $weight, $decoration){
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    text-decoration: $decoration;
+}
+@mixin button ($width, $display, $color, $weight, $radius, $overflow, $transition){
+    width: $width;
+    display: $display;
+    background-color: $color;
+    font-weight: $weight;
+    border-radius: $radius;
+    overflow: $overflow;
+    transition: $transition;
+}
+@mixin img ($height, $width, $radius, $overflow, $transition){
+    height: $height;
+    width: $width;
+    border-radius: $radius;
+    overflow: $overflow;
+    transition: $transition;
+}
+@mixin input ($width, $height, $border, $size, $gap){
+    width: $width;
+    height: $height;
+    border: $border;
+    font-size: $size;
+    gap: $gap;
+}
 body{
     background-image: url(../../images/Final/hero4.jpg);
     background-attachment: fixed;
@@ -30,9 +56,7 @@ iframe{
 }
 /* Index */
 .h1-principal{
-    font-size: 300%;
-    text-decoration: none;
-    color: #ffffff;
+    @include h (300%, #ffffff, none, none);
     p{
         padding: 10px;
         margin: 0;
@@ -52,8 +76,7 @@ iframe{
         }
 }
 .section1{
-    color: #eeeeee;
-    font-size: 350%;
+    @include h(350%, #eeeeee, none, none);
     padding-top: 200px;
     padding-bottom: 650px;
     .contacto-h1{
@@ -68,35 +91,27 @@ iframe{
     }
 }
 .e-broker{
+    @include h(110%, 0, 500, none !important);
     display: flex;
     justify-content: center;
-    text-decoration: none !important;
-    font-size: 110%;
-    font-weight: 500;
 }
 .button{
-    display: inline-block;
-    background-color: #6f6f6f;
-    transition: 0.5s;
-    width: 200px;
+    @include button(200px, inline-block, #cfcfcf, bold, 50px, hidden, 0.5s);
     font-size: 50%;
     font-weight: bold;
-    border-radius: 50px;
     overflow: hidden;
     margin: 20px;
     &:hover{
         background-color: #ffffff;
-        transition: 1s;
-        transform: translate(10);
-        transform: scale(1.5);
+        transition: 0.7s;
+        transform: scale(1.25);
     }
 }
 .form{
+    @include input(none, none, none, 150%, 2px);
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    font-size: 150%;
-    gap: 2px;
         input{
             width: 25%;
         }
@@ -110,8 +125,7 @@ iframe{
     height: 75px;
 }
 .input{
-    border: 1px solid rgb(165, 165, 165);
-    width: 15%;
+    @include input(15%, none, 1px solid rgb(165, 165, 165), none, none);
     transition: 0.5s;
         &:hover{
         width: 25%;
@@ -140,15 +154,11 @@ a{
         margin: 0;
     }
     img{
-        height: 5%;
-        width: 25%;
-        border-radius: 50px;
-        overflow: hidden;
+        @include img(5%, 25%, 50px, hidden, 0.5s);
         border-color: #ffffff;
         border-width: 1px;
         filter: blur(15px);
         filter: brightness(25%);
-        transition: 0.5s;
             &:hover{
                 filter: blur(0);
                 filter: brightness(100%);
@@ -180,22 +190,18 @@ a{
     gap: 20px;
 }
 .button2{
-    display: inline-block;
-    background-color: #ffffff;
-    width: 250px;
+    @include button(250px, inline-block, #a0a0a0, bold, 50px, hidden, 1s);
     font-size: 200%;
-    font-weight: bold;
-    border-radius: 50px;
-    overflow: hidden;
     &:hover{
-        background-color: #2b2b2b;
+        background-color: #ffffff;
         transition: 0.5s;
+        transform: translateY(-5px);
     }
 }
 .login-container-grid div{
     font-size: 2rem;
     color: #000000;
-    background-color: #777777;
+    background-color: #6f6f6f;
 }
 /* Contacto */
 .form3{
@@ -203,11 +209,19 @@ a{
     padding-left: 200px;
     display: flex;
     flex-direction: column;
-    width: 15%;
-    gap: 4px;
+    @include input(15%, none, none, none, 4px);
         input{
     height: 30px;
+    }
 }
+.button3{
+    @include button(10rem, inline-block, #a0a0a0, 550, 20px, hidden, 0.7s);
+    font-size: 2rem;
+    &:hover{
+        background-color: #ffffff;
+        transition: 0.65s;
+        transform: translateY(-3.5px);
+    }
 }
 .consulta{
     padding-top: 50px;
@@ -215,10 +229,9 @@ a{
         font-size: 100%;
     }
     p{
-        font-size: 70%;
-        width: 1500px;
         box-sizing: border-box;
         max-width: 100%;
+        @include input(1500px, none, none, 70%, none);
     }
     .consulta-mapas{
         display: flex;
@@ -249,8 +262,8 @@ a{
     justify-content: center;
     justify-content: space-evenly;
     img{
+        @include img(none, 600px, none, none, 1s);
         filter: blur(15px);
-        transition: 1s;
         &:hover{
             filter: blur(0);
             flex-grow: 0.15;
