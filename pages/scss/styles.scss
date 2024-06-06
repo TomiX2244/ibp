@@ -397,7 +397,7 @@ a{
         padding-bottom: 235px;
     }
     .h1-principal{
-        font-size: 185%;
+        font-size: 160%;
     }
     .ul-nav{
         li{
@@ -406,7 +406,7 @@ a{
         }
     }
     .e-broker{
-        font-size: 1.45rem;
+        font-size: 1.3rem;
         font-weight: 550;
     }
     .form{
@@ -420,7 +420,12 @@ a{
         }
         .input{
             width: 60%;
+            text-decoration: none;
         }
+    }
+    .button{
+        color: #eee;
+        text-decoration: none;
     }
     // Quienes somos
     .section2{
@@ -435,7 +440,8 @@ a{
     }
     .container-grid{
         p{
-            font-size: 1rem;
+            font-size: 0.8rem;
+            padding: 0;
         }
         .carrousel-inner{
             .carrousel-item.active{
@@ -449,6 +455,7 @@ a{
     // Contacto
     .form3{
         input{
+            filter: blur(0);
             width: 500%;
         }
     }
@@ -466,6 +473,9 @@ a{
         .h2-principal{
             font-size: 2.4rem;
             font-weight: bold;
+        }
+        .button2{
+            text-decoration: none;
         }
     }
     .login-container-grid{
