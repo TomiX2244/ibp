@@ -313,6 +313,9 @@ a {
   flex-grow: 0.15;
   transition: 1s;
 }
+.negocios-media iframe {
+  filter: none;
+}
 
 @media screen and (max-width: 900px) {
   body {

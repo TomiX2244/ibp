@@ -270,6 +270,9 @@ a{
             transition: 1s;
         }
     }
+    iframe{
+        filter: none;
+    }
 }
 // Media queries
 @media screen and (max-width: 900px) {
