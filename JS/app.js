@@ -11,10 +11,8 @@ function guardarDatos() {
     const pais = document.getElementById('pais').value;
     const motivo = document.getElementById('motivo').value;
     const suscripcion = document.getElementById('suscripcion').value;
-
-    // Validaciones
     if (!nombre || !edad || edad < 18 || !pais || !motivo || !suscripcion) {
-        alert('Por favor complete todos los campos y asegúrese de que tiene más de 18 años.');
+        Swal.fire("Por favor complete todos los campos y asegúrese de que tiene más de 18 años.");
         return;
     }
     usuarioDigital.nombre = nombre;
@@ -62,10 +60,6 @@ function obtenerSuscripcion(suscripcion) {
             return 'No he comprado ningún plan';
     }
 }
-function alertDatos(){
-    Swal.fire({
-        title: "Datos guardados",
-        text: "Gracias por participar en nuestra encuesta!",
-        icon: "success"
-      });
+function alertEncuesta(){
+    Swal.fire("Por favor considere completar la encuesta más abajo");
 }
