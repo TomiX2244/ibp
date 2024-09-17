@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Usuario</title>
+    <link rel="stylesheet" href="scss/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="h1-principal" target="_blank">Dominion Capital Stategies</a>
+            <ul class="ul-nav">
+                <li><a href="quienes-somos.html" target="_blank" style="text-decoration: none;"_blank>Quienes somos</a></li>
+                <li><a href="contacto.html" target="_blank" style="text-decoration: none;">Contacto</a></li>
+                <li><a href="login.html" target="_blank" style="text-decoration: none;">Login</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <h1 class="surveyTextTitle">Encuesta de Usuario</h1>
+    <div>
+        <label for="nombre"><p class="surveyText">Nombre:</p></label>
+        <input type="text" id="nombre">
+        <br><br>
+        <label for="edad"><p class="surveyText">Edad:</p></label>
+        <input type="number" id="edad">
+        <br><br>
+        <label for="pais"><p class="surveyText">País:</p></label>
+        <select id="pais">
+            <option value="America del Norte"><p>América del Norte</p></option>
+            <option value="America del Sur"><p>América del Sur</p></option>
+            <option value="Europa"><p>Europa</p></option>
+            <option value="Asia"><p>Asia</p></option>
+            <option value="Africa"><p>África</p></option>
+            <option value="Oceania"><p>Oceanía</p></option>
+        </select>
+        <br> <br>
+        <label for="motivo"><p class="surveyText">¿Cómo llegó a nuestra página?</p></label>
+        <select id="motivo">
+            <option value="1"><p>Por recomendación de alguien cercano</p></option>
+            <option value="2"><p>Por publicidad en Internet</p></option>
+            <option value="3"><p>Por buscarlo en Internet por mi cuenta</p></option>
+        </select>
+        <br> <br>
+        <label for="suscripcion"><p class="surveyText">Suscripción:</p></label>
+        <select id="suscripcion">
+            <option value="1">Plan Standard</option>
+            <option value="2">Plan Deluxe</option>
+            <option value="3">Plan Gold</option>
+            <option value="4">No he comprado ningún plan</option>
+        </select>
+        <label for="precio"><p class="surveyText">Precio de la suscripción:</p></label>
+        <input type="text" id="precio">
+        <br><br>
+        <button onclick="guardarDatos()">Guardar Datos</button>
+    </div>
+    <div id="resultado">
+    </div>
+    <div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="JS/app.js"></script>
+    </div>
+</body>
+</html>

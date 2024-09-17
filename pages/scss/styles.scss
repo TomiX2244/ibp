@@ -107,6 +107,25 @@ iframe{
         transform: scale(1.25);
     }
 }
+.encuestaButtonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+.encuestaButton {
+    display: inline-block;
+    width: 320px;
+    background-color: #cfcfcf;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    color: black !important;
+    height: 50px;
+    font-size: 2rem
+}
 .form{
     @include input(none, none, none, 150%, 2px);
     padding-left: 10px;
@@ -273,6 +292,14 @@ a{
     iframe{
         filter: none;
     }
+}
+// Encuesta
+.surveyText{
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 1.5rem;
+}
+.surveyTextTitle{
+    font-size: 3rem;
 }
 // Media queries
 @media screen and (max-width: 900px) {

@@ -1,101 +1,71 @@
-let nombreUsuario;
-let edadUsuario;
-let paisUsuario;
 const usuarioDigital = {
-    nombre: nombreUsuario,
-    edad: edadUsuario,
-    pais: paisUsuario,
-};
-let usuarioSuscripcion = ['standard', 'deluxe', 'gold', 'free'];
-let usuarioSuscricionPago = usuarioSuscripcion.filter(suscripcion => suscripcion != 'free');
-
+    nombre: '',
+    edad: '',
+    pais: '',
+    motivo: '',
+    suscripcion: ''
+}
 function guardarDatos() {
-    localStorage.setItem('nombre', usuarioDigital.nombre);
-    localStorage.setItem('edad', usuarioDigital.edad);
-    localStorage.setItem('pais', usuarioDigital.pais);
-    localStorage.setItem('motivo', usuarioDigital.motivo);
-    localStorage.setItem('suscripcion', usuarioSuscripcion);
-}
-function recuperarDatos() {
-    const nombre = localStorage.getItem('nombre');
-    const edad = localStorage.getItem('edad');
-    const pais = localStorage.getItem('pais');
-    const motivo = localStorage.getItem('motivo');
-    const suscripcion = localStorage.getItem('suscripcion');
+    const nombre = document.getElementById('nombre').value;
+    const edad = document.getElementById('edad').value;
+    const pais = document.getElementById('pais').value;
+    const motivo = document.getElementById('motivo').value;
+    const suscripcion = document.getElementById('suscripcion').value;
 
-    if (nombre) usuarioDigital.nombre = nombre;
-    if (edad) usuarioDigital.edad = edad;
-    if (pais) usuarioDigital.pais = pais;
-    if (motivo) usuarioDigital.motivo = motivo;
-    if (suscripcion) usuarioSuscripcion = suscripcion;
-}
-function preguntaUsuario() {
-    usuarioDigital.nombre = prompt('Ingresar nombre');
-    usuarioDigital.edad = prompt('Ingresar edad');
-    while (usuarioDigital.edad <18) {
-        alert('No puede ingresar a la pagina, debe ser mayor de edad')
+    // Validaciones
+    if (!nombre || !edad || edad < 18 || !pais || !motivo || !suscripcion) {
+        alert('Por favor complete todos los campos y asegúrese de que tiene más de 18 años.');
+        return;
     }
-    guardarDatos()
+    usuarioDigital.nombre = nombre;
+    usuarioDigital.edad = edad;
+    usuarioDigital.pais = pais;
+    usuarioDigital.motivo = motivo;
+    usuarioDigital.suscripcion = suscripcion;
+    localStorage.setItem('usuarioDigital', JSON.stringify(usuarioDigital));
+    document.getElementById('resultado').innerHTML = `
+        <h2>Datos Guardados:</h2>
+        <p>Nombre: ${usuarioDigital.nombre}</p>
+        <p>Edad: ${usuarioDigital.edad}</p>
+        <p>País: ${usuarioDigital.pais}</p>
+        <p>Motivo: ${obtenerMotivo(usuarioDigital.motivo)}</p>
+        <p>Suscripción: ${obtenerSuscripcion(usuarioDigital.suscripcion)}</p>
+    `
+    Swal.fire({
+        title: "Datos guardados",
+        text: "Gracias por participar en nuestra encuesta!",
+        icon: "success"
+      });
+    ;
 }
-function encuestaPais() {
-    usuarioDigital.pais = prompt("Por favor indique desde qué parte del mundo está accediendo a nuestra página: \n América del Norte \n América del Sur \n Europa \n Asia \n África \n Oceanía");
-    paisopciones();
-}
-function paisopciones() {
-    while (!['America del Norte', 'America del Sur', 'Europa', 'Oceania', 'Asia', 'Africa'].includes(usuarioDigital.pais)) {
-        alert('Debe ingresar una opción válida')
-        usuarioDigital.pais = prompt("Por favor indique desde qué parte del mundo está accediendo a nuestra página: \n América del Norte \n América del Sur \n Europa \n Asia \n África \n Oceanía")
-    }
-    alert("Gracias por visitar nuestro sitio web desde " + usuarioDigital.pais)
-}
-function encuestaMotivo() {
-    usuarioDigital.motivo = prompt('¿Cómo llegó usted a nuestra página web? \n 1: Por recomendación de alguien cercano \n 2: Por publicidad en Internet \n 3: Por buscarlo en Internet por mi cuenta');
-    while (!['1', '2', '3'].includes(usuarioDigital.motivo)) {
-        alert('Debe ingresar una opción válida');
-        usuarioDigital.motivo = prompt('¿Cómo llegó usted a nuestra página web? \n 1: Por recomendación de alguien cercano \n 2: Por publicidad en Internet \n 3: Por buscarlo en Internet por mi cuenta');
-    }
-    if (usuarioDigital.motivo === '1') {
-        prompt('Así como le han recomendado el sitio, ¿se lo recomendará a alguien más?');
-        alert('Muchas gracias por su tiempo');
-    } else if (usuarioDigital.motivo === '2') {
-        prompt('¿En qué sitio ha encontrado nuestra publicidad?');
-        alert('Muchas gracias por su tiempo');
-    } else if (usuarioDigital.motivo === '3') {
-        prompt('¿Qué motor de búsqueda utilizó para encontrar nuestro sitio? Ej: Google, Firefox');
-        alert('Muchas gracias por su tiempo');
+function obtenerMotivo(motivo) {
+    switch(motivo) {
+        case '1':
+            return 'Por recomendación de alguien cercano';
+        case '2':
+            return 'Por publicidad en Internet';
+        case '3':
+            return 'Por buscarlo en Internet por mi cuenta';
+        default:
+            return 'Desconocido';
     }
 }
-
-function encuestaSuscripcion() {
-    usuarioSuscripcion = prompt('¿Ha contratado uno de nuestros planes? De ser así, indique cuál \n 1: He comprado el plan standard \n 2: He comprado el plan deluxe \n 3: He comprado el plan gold \n 4: No he comprado ningún plan');
-    if (usuarioSuscripcion === 1) {
-        console.log('Usuario: Plan Standard');
-    }
-    if (usuarioSuscripcion === 2) {
-        console.log('Usuario: Plan Deluxe');
-    }
-    if (usuarioSuscripcion === 3) {
-        console.log('Usuario: Plan Gold');
-    }
-    if (usuarioSuscripcion === 4) {
-        console.log('Usuario: Plan Gratuito');
-    }
-    while (!['1', '2', '3', '4'].includes(usuarioSuscripcion)) {
-        alert('Debe ingresar una opción válida');
-        usuarioSuscripcion = prompt('¿Ha contratado uno de nuestros planes? De ser así, indique cuál \n 1: He comprado el plan standard \n 2: He comprado el plan deluxe \n 3: He comprado el plan gold \n 4: No he comprado ningún plan');
-    }
-    if (['1', '2', '3'].includes(usuarioSuscripcion)) {
-        console.log('Usuario de Pago');
+function obtenerSuscripcion(suscripcion) {
+    switch(suscripcion) {
+        case '1':
+            return 'Plan Standard';
+        case '2':
+            return 'Plan Deluxe';
+        case '3':
+            return 'Plan Gold';
+        case '4':
+            return 'No he comprado ningún plan';
     }
 }
-function encuestaSuscripcionPrecio() {
-    let encuestaSuscripcionPrecioInicial = prompt('¿Cuanto ha costado inicialmente la suscripción?')
-    let encuestaSuscripcionPrecioFinal = (encuestaSuscripcionPrecioInicial * 1.21)
-    alert('El precio tras impuestos es de $' + encuestaSuscripcionPrecioFinal)
+function alertDatos(){
+    Swal.fire({
+        title: "Datos guardados",
+        text: "Gracias por participar en nuestra encuesta!",
+        icon: "success"
+      });
 }
-preguntaUsuario()
-alert('Usted ha sido elegido para llevar a cabo una encuesta, por favor responda las siguientes preguntas:')
-encuestaPais()
-encuestaMotivo()
-encuestaSuscripcion()
-encuestaSuscripcionPrecio()
