@@ -11,11 +11,18 @@ function guardarDatos() {
         const { value: edad } = document.getElementById('edad');
         const { value: pais } = document.getElementById('pais');
         const { value: motivo } = document.getElementById('motivo');
-        const { value: suscripcion } = document.getElementById('suscripcion');        
-        if (!nombre || !edad || isNaN(edad) || edad < 18 || edad > 120 || !pais || !motivo || !suscripcion) {
-            Swal.fire("Por favor complete todos los campos y asegúrese de que tiene más de 18 años y que la edad es válida.");
-            return;
-        }
+        const { value: suscripcion } = document.getElementById('suscripcion');
+        const errorMessage = (!nombre || !edad || isNaN(edad) || edad < 18 || edad > 120 || !pais || !motivo || !suscripcion)
+            ? "Por favor complete todos los campos y asegúrese de que tiene más de 18 años y que la edad es válida."
+            : null;
+            if (errorMessage) {
+                Swal.fire(errorMessage);
+                return;
+            }
+        // if (!nombre || !edad || isNaN(edad) || edad < 18 || edad > 120 || !pais || !motivo || !suscripcion) {
+        //     Swal.fire("Por favor complete todos los campos y asegúrese de que tiene más de 18 años y que la edad es válida.");
+        //     return;
+        // }
         usuarioDigital.nombre = nombre;
         usuarioDigital.edad = edad;
         usuarioDigital.pais = pais;
